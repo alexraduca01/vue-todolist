@@ -18,8 +18,8 @@
                 <header class="text-center my-3">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS21QQs3kWvFjA1iunhwKB0DbaEnUCU9uBKhNG1yxY0&s" alt="logo">
                     <div class="d-flex justify-content-center gap-2 my-3">
-                        <input type="text" class="form-control w-50">
-                        <button class="btn btn-info">Aggiungi</button>
+                        <input type="text" class="form-control w-50" v-model="todoText" @keyup.enter="addTodo()">
+                        <button @click="addTodo()" class="btn btn-info">Aggiungi</button>
                     </div>
                 </header>
 
