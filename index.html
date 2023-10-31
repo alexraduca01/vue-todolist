@@ -27,7 +27,7 @@
                     <div class="list-group">
                         <div v-for="(todo, index) in todos" class="d-flex justify-content-between list-group-item list-group-item-action">
                             <span class="cursor-pointer" :class="{'line-through': todo.done}">{{ todo.text }}</span>
-                            <i class="fa-solid cursor-pointer fa-xmark"></i>
+                            <i @click="removeTodo(index)" class="fa-solid cursor-pointer fa-xmark"></i>
                         </div>
                         
                     </div>
