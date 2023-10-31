@@ -51,6 +51,9 @@ createApp({
                 text: this.todoText,
                 done: false,
             })
+        },
+        doneTodo(index){
+            this.todos[index].done =!this.todos[index].done;
         }
     },
 }).mount('#app');
