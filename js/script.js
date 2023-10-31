@@ -24,17 +24,17 @@ createApp({
             todos: [
                 {
                     id: 1,
-                    text: 'Fare la spesa',
+                    text: 'Catturare Giratina',
                     done: false,
                 },
                 {
                     id: 2,
-                    text: 'Chiamare la mamma',
+                    text: 'Battere la lega',
                     done: true,
                 },
                 {
                     id: 3,
-                    text: "Passare l'aspriapolvere",
+                    text: 'Completare il pokédex',
                     done: false,
                 },
             ],
@@ -54,7 +54,13 @@ createApp({
         },
         doneTodo(index){
             this.todos[index].done =!this.todos[index].done;
-        }
+        },
+        playSound (sound) {
+            if(sound) {
+              const audio = new Audio(sound);
+              audio.play();
+            }
+        },
     },
 }).mount('#app');
 
