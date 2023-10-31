@@ -13,7 +13,27 @@
     <body>
         
         <div id="app">
-            
+            <div class="container">
+                
+                <header class="text-center my-3">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS21QQs3kWvFjA1iunhwKB0DbaEnUCU9uBKhNG1yxY0&s" alt="logo">
+                    <div class="d-flex justify-content-center gap-2 my-3">
+                        <input type="text" class="form-control w-50">
+                        <button class="btn btn-info">Aggiungi</button>
+                    </div>
+                </header>
+
+                <div>
+                    <div class="list-group">
+                        <div v-for="(todo, index) in todos" class="d-flex justify-content-between list-group-item list-group-item-action">
+                            <span class="cursor-pointer" :class="{'line-through': todo.done}">{{ todo.text }}</span>
+                            <i class="fa-solid cursor-pointer fa-xmark"></i>
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
         </div>
 
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
